@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SignedOut, SignInButton, useUser } from "@clerk/clerk-react";
+import { SignInButton, useUser } from "@clerk/clerk-react";
 import { ArrowRight, Code2, Layout, Zap } from "lucide-react";
 import { Link } from "react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";

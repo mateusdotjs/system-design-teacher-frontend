@@ -23,6 +23,7 @@
 
     /* Path Aliases (Shadcn Required) */
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"]
     }
