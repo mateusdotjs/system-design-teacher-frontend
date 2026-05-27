@@ -55,13 +55,13 @@ export function SidebarRight({
           </div>
         ) : (
           <div className="p-6 space-y-8 animate-in fade-in duration-500">
-            {/* Feedbacks Positivos */}
+            {/* Positive Feedbacks */}
             {feedback?.positive_feedbacks &&
               feedback.positive_feedbacks.length > 0 && (
                 <section>
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-2">
                     <Lightbulb className="w-4 h-4 text-emerald-500" />
-                    Feedbacks Positivos
+                    Positive Feedbacks
                   </h3>
                   <ul className="space-y-3">
                     {feedback.positive_feedbacks.map((suggestion, i) => (
@@ -75,13 +75,13 @@ export function SidebarRight({
                   </ul>
                 </section>
               )}
-            {/* Feedbacks Negativos */}
+            {/* Negative Feedbacks */}
             {feedback?.negative_feedbacks &&
               feedback.negative_feedbacks.length > 0 && (
                 <section>
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3 flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 text-destructive" />
-                    Feedbacks Negativos
+                    Negative Feedbacks
                   </h3>
                   <ul className="space-y-3">
                     {feedback.negative_feedbacks.map((problem, i) => (
