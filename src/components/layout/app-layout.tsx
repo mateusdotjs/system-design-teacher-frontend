@@ -17,8 +17,8 @@ export function AppLayout({ children, hideFooter }: AppLayoutProps) {
       
       {!hideFooter && (
         <footer className="border-t border-border/40 py-6 md:py-0">
-          <div className="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row mx-auto px-4">
-            <p className="text-sm text-muted-foreground">
+          <div className="container flex items-center justify-center md:h-16 mx-auto px-4">
+            <p className="text-sm text-muted-foreground text-center">
               &copy; {new Date().getFullYear()} System Design Prep. Built for architects.
             </p>
           </div>

@@ -41,9 +41,6 @@ export function LandingPage() {
               </Button>
             </SignInButton>
           )}
-          <Button variant="outline" size="lg" className="px-8 text-base font-semibold">
-            View Challenges
-          </Button>
         </div>
       </section>
 
