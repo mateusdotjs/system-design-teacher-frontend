@@ -5,6 +5,7 @@ import { ProblemsPage } from "./pages/problems-page";
 import { SubmissionsPage } from "./pages/submissions-page";
 import EditorPage from "./pages/editor-page";
 import ProtectedRoute from "./components/protected-route";
+import { NotFoundPage } from "./pages/not-found-page";
 
 function App() {
   const location = useLocation();
@@ -38,6 +39,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppLayout>
   );
