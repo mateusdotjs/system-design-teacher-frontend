@@ -10,7 +10,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <Boxes className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold tracking-tight">System Design <span className="text-primary">Prep</span></span>
+            <span className="text-xl font-bold tracking-tight">System Design <span className="text-primary">Lab</span></span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 ml-10">
             <Link to="/problems" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
