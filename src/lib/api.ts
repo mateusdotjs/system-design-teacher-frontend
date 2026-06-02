@@ -48,8 +48,8 @@ export function useApi() {
     return request(`/problems/${id}`);
   };
 
-  const getSubmissions = async () => {
-    return request('/submissions');
+  const getSubmissions = async (page: number = 1) => {
+    return request(`/submissions?page=${page}`);
   };
 
   const getSubmission = async (id: string) => {
