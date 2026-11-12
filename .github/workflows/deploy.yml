@@ -30,4 +30,3 @@ jobs:
           tags: ghcr.io/mateusdotjs/system-design-teacher-frontend:latest
           build-args: |
             VITE_API_URL=${{ secrets.VITE_API_URL }}
-            VITE_CLERK_PUBLISHABLE_KEY=${{ secrets.VITE_CLERK_PUBLISHABLE_KEY }}

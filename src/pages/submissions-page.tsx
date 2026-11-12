@@ -83,7 +83,7 @@ export function SubmissionsPage() {
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-foreground to-foreground/75 bg-clip-text text-transparent flex items-center gap-2.5">
             <Brain className="h-8 w-8 text-primary" />
-            My Architecture Submissions
+            Architecture Submissions
           </h1>
           <p className="text-muted-foreground mt-1">
             Review your past system designs, AI feedback, and optimization recommendations.

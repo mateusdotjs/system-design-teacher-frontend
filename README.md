@@ -23,7 +23,6 @@ A interactive web application designed to help software engineers learn, practic
 - **Data Fetching**: [TanStack React Query v5](https://tanstack.com/query/latest)
 - **Styling**: [TailwindCSS v4](https://tailwindcss.com/)
 - **UI Components**: [Shadcn UI](https://ui.shadcn.com/) / Radix UI primitives
-- **Authentication**: [Clerk](https://clerk.com/)
 - **Routing**: [React Router v7](https://reactrouter.com/)
 
 ---
@@ -36,8 +35,7 @@ src/
 ├── components/
 │   ├── editor/         # Diagram editor components (Sidebar, Node configs, Custom nodes/edges)
 │   ├── layout/         # General application Shell (Navbar, Footer, Layout wraps)
-│   ├── ui/             # Reusable core UI components (Button, Card, Badge, etc.)
-│   └── protected-route # Auth guard wrapper
+│   └── ui/             # Reusable core UI components (Button, Card, Badge, etc.)
 ├── lib/
 │   ├── api.ts          # API Client utilities and React hooks for backend communication
 │   └── utils.ts        # Tailwind merge helpers
@@ -46,7 +44,7 @@ src/
 │   ├── problems-page   # Challenge list dashboard
 │   ├── editor-page     # Interactive diagram editor canvas
 │   └── submissions-page# Submissions history
-├── providers/          # Global application providers (QueryClient, Routing, Clerk)
+├── providers/          # Global application providers (QueryClient, Routing)
 ├── app.tsx             # Main router config & views
 └── main.tsx            # App entrypoint
 ```
@@ -81,9 +79,6 @@ Make sure you have the following installed on your machine:
    ```env
    # Backend API Endpoint
    VITE_API_URL=http://localhost:3000
-
-   # Clerk Auth Publishable Key
-   VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
    ```
 
 ---

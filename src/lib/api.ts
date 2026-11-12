@@ -1,27 +1,17 @@
-import { useAuth } from "@clerk/clerk-react";
-
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
 export function useApi() {
-  const { getToken } = useAuth();
-
   const request = async (
     endpoint: string,
     options: RequestInit = {}
   ) => {
     try {
-      const token = await getToken();
-
       const headers: Record<string, string> = {
         ...options.headers as Record<string, string>,
       };
 
       if (options.body) {
         headers['Content-Type'] = 'application/json';
-      }
-
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
       }
 
       const response = await fetch(`${API_URL}${endpoint}`, {

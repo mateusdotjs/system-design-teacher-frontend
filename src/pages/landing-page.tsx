@@ -1,12 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { SignInButton, useUser } from "@clerk/clerk-react";
 import { ArrowRight, Code2, Layout, Zap } from "lucide-react";
 import { Link } from "react-router";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function LandingPage() {
-  const { isSignedIn } = useUser();
-
   return (
     <div className="flex flex-col gap-20 pb-20">
       {/* Hero Section */}
@@ -26,21 +23,12 @@ export function LandingPage() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          {isSignedIn ? (
-            <Link to="/problems">
-              <Button size="lg" className="px-8 text-base font-semibold group">
-                Go to Problems
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          ) : (
-            <SignInButton mode="modal">
-              <Button size="lg" className="px-8 text-base font-semibold group">
-                Start Learning Now
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </SignInButton>
-          )}
+          <Link to="/problems">
+            <Button size="lg" className="px-8 text-base font-semibold group">
+              Start Learning Now
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </section>
 

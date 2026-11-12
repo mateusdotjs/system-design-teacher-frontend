@@ -4,7 +4,6 @@ import { LandingPage } from "./pages/landing-page";
 import { ProblemsPage } from "./pages/problems-page";
 import { SubmissionsPage } from "./pages/submissions-page";
 import EditorPage from "./pages/editor-page";
-import ProtectedRoute from "./components/protected-route";
 import { NotFoundPage } from "./pages/not-found-page";
 
 function App() {
@@ -15,30 +14,9 @@ function App() {
     <AppLayout hideFooter={isEditor}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route
-          path="/problems"
-          element={
-            <ProtectedRoute>
-              <ProblemsPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/editor/:id/:submissionId?"
-          element={
-            <ProtectedRoute>
-              <EditorPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/submissions"
-          element={
-            <ProtectedRoute>
-              <SubmissionsPage />
-            </ProtectedRoute>
-          }
-        />
+        <Route path="/problems" element={<ProblemsPage />} />
+        <Route path="/editor/:id/:submissionId?" element={<EditorPage />} />
+        <Route path="/submissions" element={<SubmissionsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </AppLayout>
